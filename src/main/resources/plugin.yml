@@ -1,0 +1,18 @@
+name: SeedBasket
+version: '${project.version}'
+main: saber.seedbasket.SeedBasket
+api-version: 1.19
+authors: [ Saber ]
+description: A basket that plants multiple crops at once
+website: https://github.com/SaberSupe
+commands:
+  seedbasket:
+    description: Gives seed basket atm
+    usage: /<command> give {ign} {amount}
+permissions:
+  seedbasket.give:
+    default: op
+    description: Allows the player to give seed baskets
+  seedbasket.use:
+    default: true
+    description: Allows the player to use seed baskets

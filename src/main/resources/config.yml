@@ -1,0 +1,9 @@
+#Number of crops planted in straight line from click
+cropsPlanted: 5
+
+#Name of the seed basket
+seedBasketName: "&bSeed Basket"
+
+#Messages
+msgPlayerNotFound: "&cPlayer Not Found"
+msgNoPerms: "&cYou don't have permission to use this command"
