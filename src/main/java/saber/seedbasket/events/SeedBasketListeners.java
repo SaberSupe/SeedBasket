@@ -6,6 +6,7 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -135,6 +136,12 @@ public class SeedBasketListeners implements Listener {
 
         // Make sure it's the seed basket inventory
         if (e.getView().getTitle().equalsIgnoreCase(plugin.BasketName)){
+
+            // Stop them from using number keys
+            if (e.getClick() == ClickType.NUMBER_KEY){
+                e.setCancelled(true);
+                return;
+            }
 
             // loop through the inventory to see what crop is inside it
             Material inside = null;
